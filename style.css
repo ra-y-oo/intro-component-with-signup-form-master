@@ -1,0 +1,118 @@
+:root {
+  ---red: hsl(0, 100%, 74%) ;
+  --clr-green: hsl(154, 59%, 51%);
+  --clr-blue: hsl(248, 32%, 49%);
+  --clr-darkBlue: hsl(249, 10%, 26%) ;
+  --clr-grayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: var(---red);
+  background-image: url(./images/bg-intro-mobile.png);
+  text-align: center;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+.flex .left {
+  margin-top: 30px;
+  padding: 30px;
+  max-width: 300px;
+}
+.flex .left h1 {
+  color: white;
+}
+.flex .left p {
+  color: rgb(255, 255, 255);
+}
+.flex .right {
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  gap: 20px;
+  max-width: 300px;
+}
+.flex .right .banner {
+  background-color: var(--clr-blue);
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+}
+.flex .right .banner .light-txt {
+  font-weight: 400;
+}
+.flex .right form {
+  background: white;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+.flex .right form input {
+  display: block;
+  padding: 10px 20px;
+  border: solid 2px var(--clr-grayishBlue);
+  border-radius: 5px;
+  font-weight: bold;
+}
+.flex .right form input::-moz-placeholder {
+  font-weight: bold;
+  color: var(--clr-darkBlue);
+}
+.flex .right form input::placeholder {
+  font-weight: bold;
+  color: var(--clr-darkBlue);
+}
+.flex .right form button {
+  background: var(--clr-green);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+.flex .right form p {
+  color: var(--clr-grayishBlue);
+}
+.flex .right form p .red {
+  color: var(---red);
+}
+
+@media (min-width: 1000px) {
+  .flex {
+    padding: 100px;
+    flex-direction: row;
+    max-width: none;
+  }
+  .flex .left {
+    max-width: 450px;
+    min-width: 375px;
+    text-align: left;
+    margin: auto 0;
+  }
+  .flex .left h1 {
+    font-size: 2.5rem;
+  }
+  .flex .right {
+    max-width: 450px;
+    min-width: 375px;
+  }
+}/*# sourceMappingURL=style.css.map */
